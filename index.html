@@ -18,6 +18,8 @@
         <span v-if="showBooks">Hide Books</span>
         <span v-else>Show Books</span>
       </button>
+      <!-- v-show uses toggles css display property to hide or show -->
+      <div v-show="showBooks">currently showing books</div>
     </div>
 
     <script src="./app.js"></script>
