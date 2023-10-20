@@ -9,12 +9,15 @@
     <h1>Hello Vue!</h1>
 
     <div id="app">
-      <h2>{{ title }}</h2>
-      <p>{{ author }}</p>
-      <p>{{ age }}</p>
-      <button v-on:click="age++">Increase Age</button>
-      <button v-on:click="age--">Decrease Age</button>
-      <div @click="changeTitle('OathBringer')">change title</div>
+      <div v-if="showBooks">
+        <h2>{{ title }}</h2>
+        <p>{{ author }}</p>
+        <p>{{ age }}</p>
+      </div>
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-if="!showBooks">Show Books</span>
+      </button>
     </div>
 
     <script src="./app.js"></script>
