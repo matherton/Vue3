@@ -2,9 +2,14 @@ const app = Vue.createApp({
   data() {
     return {
       showBooks: true,
-      title: "Empire State Building",
+      /* title: "Empire State Building",
       author: "Michael Scott",
-      age: 30,
+      age: 30, */
+      books: [
+        { title: "Empire State Building", author: "Michael Scott", age: 30 },
+        { title: "Name of the wind", author: "Patrick Rothfus", age: 43 },
+        { title: "Empire Strikes Back", author: "Gearge Lukas", age: 57 },
+      ],
       x: 0,
       y: 0,
     };
