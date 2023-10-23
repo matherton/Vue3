@@ -5,6 +5,8 @@ const app = Vue.createApp({
       title: "Empire State Building",
       author: "Michael Scott",
       age: 30,
+      x: 0,
+      y: 0,
     };
   },
   methods: {
@@ -14,6 +16,10 @@ const app = Vue.createApp({
     handleEvent(e) {
       console.log(e);
       console.log(e.type);
+    },
+    handleMousemove(e) {
+      this.x = e.offsetX;
+      this.y = e.offsetY;
     },
   },
 });
