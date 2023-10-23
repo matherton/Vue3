@@ -1,14 +1,27 @@
 const app = Vue.createApp({
   data() {
     return {
+      url: "http://insightinternet.co.uk",
       showBooks: true,
       /* title: "Empire State Building",
       author: "Michael Scott",
       age: 30, */
       books: [
-        { title: "Empire State Building", author: "Michael Scott", age: 30 },
-        { title: "Name of the wind", author: "Patrick Rothfus", age: 43 },
-        { title: "Empire Strikes Back", author: "Gearge Lukas", age: 57 },
+        {
+          title: "Empire State Building",
+          author: "Michael Scott",
+          img: "./assets/book1.jpeg",
+        },
+        {
+          title: "Name of the wind",
+          author: "Patrick Rothfus",
+          img: "./assets/book2.jpeg",
+        },
+        {
+          title: "Empire Strikes Back",
+          author: "Gearge Lukas",
+          img: "./assets/book3.jpeg",
+        },
       ],
       x: 0,
       y: 0,
