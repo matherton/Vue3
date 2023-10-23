@@ -13,6 +13,31 @@
         margin: 20px;
         display: inline-block;
       }
+      body {
+        background: #eee;
+        width: 960px;
+        margin: 20px auto;
+      }
+      p,
+      h3,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style-type: none;
+        background: rgb(249, 248, 248);
+        margin: 20px auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      li.fav {
+        background-color: #ffd9e2;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -23,7 +48,11 @@
       <a :href="url">best website ever!!!</a>
       <div v-if="showBooks">
         <ul>
-          <li v-for="book in books" :key="book.title">
+          <li
+            v-for="book in books"
+            :key="book.title"
+            :class="{fav: book.isFav}"
+          >
             <img :src="book.img" :alt="book.title" />
             <h3>{{ book.title }}</h3>
             <p>{{ book.author }}</p>
