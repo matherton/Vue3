@@ -13,10 +13,19 @@
       <p>Grab your ninja swag for half price!</p>
     </Modal>
   </div>
+  <div v-if="showModal2">
+    <Modal @close="toggleModal2"> test </Modal>
+  </div>
   <button @click.alt="toggleModal">Show Modal(alt)</button>
+  <button @click="toggleModal2">open 2nd Modal</button>
 </template>
 
 <script>
+//challenge
+//1. create an extra button to open a different modal
+//2. use the  same modal component but pass in different template (slot)
+//3. Use a different method (eg toggleModal2) and data (showModal2) to toggle the modal
+
 import Modal from "./components/Modal";
 export default {
   name: "App",
@@ -27,6 +36,7 @@ export default {
       header: "Sign up for the Giveaway!",
       text: "Grab your ninja swag for half price!",
       showModal: false,
+      showModal2: false,
     };
   },
   methods: {
@@ -37,6 +47,9 @@ export default {
     },
     toggleModal() {
       this.showModal = !this.showModal;
+    },
+    toggleModal2() {
+      this.showModal2 = !this.showModal2;
     },
   },
 };
