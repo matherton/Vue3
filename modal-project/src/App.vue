@@ -14,7 +14,12 @@
     </Modal>
   </div>
   <div v-if="showModal2">
-    <Modal @close="toggleModal2"> test </Modal>
+    <Modal @close="toggleModal2">
+      <h1>Give us a call!</h1>
+      <template v-slot:tel>
+        <a href="tel:0131234567">0131234567</a>
+      </template>
+    </Modal>
   </div>
   <button @click.alt="toggleModal">Show Modal(alt)</button>
   <button @click="toggleModal2">open 2nd Modal</button>
