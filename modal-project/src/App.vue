@@ -4,7 +4,14 @@
   <input type="text" ref="name" />
   <button @click="handleClick">Press me and check the console</button>
   <div v-if="showModal">
-    <Modal theme="sale" @close="toggleModal" />
+    <Modal theme="sale" @close="toggleModal">
+      <template v-slot:links>
+        <a href="#">sign up now</a>
+        <a href="#">more info</a>
+      </template>
+      <h1>Ninja Giveaway!</h1>
+      <p>Grab your ninja swag for half price!</p>
+    </Modal>
   </div>
   <button @click.alt="toggleModal">Show Modal(alt)</button>
 </template>
