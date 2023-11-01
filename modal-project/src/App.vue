@@ -1,5 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
+
   <input type="text" ref="name" />
   <button @click="handleClick">Press me and check the console</button>
   <div v-if="showModal">
@@ -46,7 +47,9 @@ export default {
 h1 {
   font-weight: bold;
   color: #2c3e50;
-  display: inline-block;
+  display: block;
+  max-width: fit-content;
+  margin: 0.85rem auto;
   padding-bottom: 0.25rem;
   border-bottom: 0.25rem dotted #2c3e50;
 }
