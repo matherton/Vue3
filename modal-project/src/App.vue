@@ -4,7 +4,7 @@
   <input type="text" ref="name" />
   <button @click="handleClick">Press me and check the console</button>
   <div v-if="showModal">
-    <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />
+    <Modal theme="sale" @close="toggleModal" />
   </div>
   <button @click.alt="toggleModal">Show Modal(alt)</button>
 </template>
