@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  props: ["theme"],
   methods: {
     closeModal() {
       this.$emit("close");
